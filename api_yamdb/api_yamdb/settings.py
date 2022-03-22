@@ -9,7 +9,7 @@ load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '123' #os.getenv('SECRET_KEY')
+SECRET_KEY = '123'  # os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -118,8 +118,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
-#STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
 
 
 REST_FRAMEWORK = {

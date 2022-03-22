@@ -13,13 +13,14 @@ class IsModerator(BasePermission):
             or request.user.is_admin
         )
 
+
 class IsAmdinOrReadOnly(BasePermission):
     def has_permission(self, request, view):
-        return (request.user in SAFE_METHODS or
-                request.user.is_staff or    
-                request.user.role == 'admin')
+        return (request.user in SAFE_METHODS
+                or request.user.is_staff
+                or request.user.role == 'admin')
 
-    
+
 class IsAdmin(BasePermission):
 
     def has_permission(self, request, view):
